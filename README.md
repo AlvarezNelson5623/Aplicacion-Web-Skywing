@@ -11,7 +11,7 @@ Nelson Ivan Alvarez Suarez – 2215002 ||
 
 ### Start Apache | Start MySQL -> admin 
 ### `Crear Usuario` -> host: "localhost", user: "admin", password: "147258369", database: "skywing" (Todos los Privilegios globales)
-### `Import DB` -> use skywing.sql (asegurese de que la DB se asociará al usuario creado) -> ir al servidor (Servidor: 127.0.0.1) -> Bases de datos -> "Añadir privilegios a la o las base de datos siguientes:" - "skywing" (continuar -> seleccionar todo -> continuar) 
+### `Import DB` -> use skywing.sql (asegurese de que la DB se asociará al usuario creado) -> ir al servidor (Servidor: 127.0.0.1) -> cuentas de usario (user 'admin') -> Bases de datos  -> "Añadir privilegios a la o las base de datos siguientes:" - "skywing" (continuar -> seleccionar todo -> continuar) 
 ### `Datos predeterminados BD` -> use llenado.sql (seccion sql, ejecute insert por separado)
 
 ## Instrucciones para Correcta Ejecución - Client (FRONTEND)
