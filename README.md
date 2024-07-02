@@ -7,7 +7,12 @@ Nelson Ivan Alvarez Suarez – 2215002 ||
  Leider Joanny Esteban Lozano – 2215003  ||
  Brandon David Jaimes Castro – 2211859 ||
 
-# Modulos/librerias a descargar para el funcionamiento del proyecto
+## Base de datos - Use Xampp
+
+### Start Apache | Start MySQL -> admin 
+### `Crear Usuario` -> host: "localhost", user: "admin", password: "147258369", database: "skywing" 
+### `Import DB` -> use skywing.sql (asegurese de que la DB se asociará aL usuario creado)
+### `Datos predeterminados BD` -> use llenado.sql (seccion sql, ejecute insert por separado)
 
 ## Instrucciones para Correcta Ejecución - Client (FRONTEND)
 
@@ -24,7 +29,7 @@ Nelson Ivan Alvarez Suarez – 2215002 ||
 #### npm init
 #### npm install mysql express
 #### npm install cors
-###`Ejecutar Server`
+### `Ejecutar Server`
 #### node index.js
 
 ## Login
