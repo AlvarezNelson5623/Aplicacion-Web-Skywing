@@ -29,48 +29,49 @@ function Reservas() {
   return(
     <div className="Reservas">
         <div className="datos">
-            <label>Id Reserva:<input 
+            <label>Reserva: <input placeholder='No Editable'
             onChange={(event)=>{
               setIdReserva(event.target.value);
             }}
             disabled type="number"></input></label>
-            <label>Id Rura:<input 
+            <label>Id Ruta:   <input placeholder='id'
             onChange={(event)=>{
               setIdRuta(event.target.value);
             }}
             type="number"></input></label>
-            <label>Id Clase:<input 
+            <label>Id Clase:<input placeholder='id'
             onChange={(event)=>{
               setIdClase(event.target.value);
             }}
             type="number"></input></label>
-            <label>Id Extras:<input 
+            <label>Id Extras:<input placeholder='id'
             onChange={(event)=>{
               setIdExtra(event.target.value);
             }}
             type="number"></input></label>
-            <label>Fecha:<input 
+            <label>Fecha V:<input placeholder='yyy-mm-dd'
             onChange={(event)=>{
               setFecha(event.target.value);
             }}
             type="text"></input></label>
-            <label>Hora:<input 
+            <label>Hora V: <input placeholder='hh:mm:ss'
             onChange={(event)=>{
               setHora(event.target.value);
             }}
             type="text"></input></label>
-            <label>Pasajeros:<input 
+            <label>User V: <input placeholder='cantidad'
             onChange={(event)=>{
               setPasajeros(event.target.value);
             }}
             type="number"></input></label>
-            <label>Costo Reserva:<input 
+            <label>Costo:   <input placeholder='valor'
             onChange={(event)=>{
               setCosto(event.target.value);
             }}
-            disabled  type="number"></input></label>
+            type="number"></input></label>
             <button onClick={add}>Registrar</button>
         </div>
+        
     </div>
 )
 }
