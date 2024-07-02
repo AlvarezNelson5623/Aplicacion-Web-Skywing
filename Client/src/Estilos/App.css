@@ -1,0 +1,54 @@
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+.nave{
+  color: white;
+  display: flex;
+}
+footer {
+  background-color: #333;
+  color: #e0f3ff;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+.navbar {
+  font-family: 'Arial', sans-serif; 
+}
+.brand::first-letter{
+  color: rgb(82, 121, 179);
+}
+.brand{
+  font-size: larger;
+  display: inline-block;
+}
+.navTittle{
+ font-size: 600px; 
+}
+.nav-link {
+  color: #333;
+  transition: color 0.3s; 
+}
+.nav-link:hover {
+  color: #007bff; 
+}
+
+p{
+  font-size: larger;
+}
+.navbar .social-icons {
+  margin-left: auto;
+margin-right: 40px;
+}
+
+.navbar .social-icons a {
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform 0.3s; 
+}
+
+.navbar .social-icons a:hover {
+  transform: scale(1.1); 
+}

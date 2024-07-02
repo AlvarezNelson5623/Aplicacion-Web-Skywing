@@ -1,0 +1,84 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-section {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .logo span {
+    color: #4caf50;
+  }
+  
+  .about p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .contact {
+    margin-top: 20px;
+  }
+  
+  .contact span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .socials {
+    margin-top: 20px;
+  }
+  
+  .socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .links ul li a {
+    color: rgb(82, 121, 179);
+    text-decoration: none;
+  }
+  .name::first-letter{
+        color: rgb(82, 121, 179);
+      
+  }
+  .name{
+    display: inline-block;
+  }
+  .contact-form input[type='email'],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #ccc;
+    border-top: 1px solid #333;
+  }
+  

@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background: linear-gradient(to bottom, #061b42, #2e5375); 
+}
+
+h1 {
+  font-size: 150%;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-weight: 100;
+}
+
+.image {
+  overflow-x: auto;
+  width:100vw;
+  height:100vh;
+  margin-top: 0px;
+}
+
+.image p{
+  font-size: x-large;
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align:center;
+}
+
+.content {
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;  
+  grid-template-rows: auto; 
+  grid-template-columns: auto auto; 
+  gap: 10px; 
+  margin: 10px;
+}
+
+.grid-item {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border: 1px solid #121a61;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.accordion-image {
+  width: 30%;
+  height: 30%;
+  margin-right: 5%;
+}
+
+.accordion-title {
+  margin: 0;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+}
+
+.grid-container2 {
+  display: grid;
+  align-items: center;  
+  grid-template-rows: auto; 
+  grid-template-columns: auto auto auto auto;
+
+}
+
+.item1grid2 {
+  grid-column: 2 / 3;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .accordion-image {
+        width: 10%;
+        height: 10%;
+        margin-right: 0;
+    }
+
+    .accordion-content {
+        padding: 10px;
+        display: block;
+    }
+
+    .image p {
+        font-size: large;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
