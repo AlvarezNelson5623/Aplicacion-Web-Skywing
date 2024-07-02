@@ -15,7 +15,7 @@ Nelson Ivan Alvarez Suarez – 2215002 ||
 ### `Datos predeterminados BD` -> use llenado.sql (seccion sql, ejecute insert por separado)
 
 ## Instrucciones para Correcta Ejecución - Client (FRONTEND)
-
+Asegurese de estar en la ruta correcta (sobre la carpeta Client)
 
 ### `Instalar modulos de REACT`
 #### npm install react react-dom 
@@ -25,6 +25,7 @@ Nelson Ivan Alvarez Suarez – 2215002 ||
 #### npm start
 
 ## Instrucciones para Correcta Ejecución - Server (BACKEND)
+Asegurese de estar en la ruta correcta (sobre la carpeta Server)
 ### `Instalar modulos`
 #### npm init
 #### npm install mysql express
