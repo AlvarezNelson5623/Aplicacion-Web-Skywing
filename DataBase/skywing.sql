@@ -78,10 +78,10 @@ CREATE TABLE  reservas (
   id_ruta INT NOT NULL,
   id_clase INT(11) NOT NULL,
   id_extras INT(11) NOT NULL,
-  fecha DATE NOT NULL,
+  fecha VARCHAR(11) NOT NULL,
   hora TIME NOT NULL,
   pasajeros INT(11) NOT NULL,
-  costo_reserva DOUBLE NULL,
+  costo_reserva INT NOT NULL,
   PRIMARY KEY (id_reserva),
   CONSTRAINT reservas_ibfk_3
     FOREIGN KEY (id_clase)
