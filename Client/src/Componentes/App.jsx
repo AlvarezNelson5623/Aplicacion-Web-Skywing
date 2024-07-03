@@ -21,31 +21,6 @@ function App() {
   const [username, setUsername] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
-  
-/*    const togglePasswordVisibility = () => {
-      setShowPassword(!showPassword);
-    };
-  const handleNavLinkClick = (page) => {
-    setCurrentPage(page);
-  };
-
-  const handleLogin = () => {
-    if (username === 'usuario' && password === 'contraseña') {
-      setLoggedIn(true);
-      setError('');
-      setShowModal(false);
-    } else {
-      setError('Usuario o contraseña incorrectos');
-    }
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-    setUsername('');
-    setPassword('');
-    handleNavLinkClick('carousel')
-  };
-*/
 useEffect(() => {
   const checkSessionExpiration = () => {
     const expirationTime = localStorage.getItem('expirationTime');
