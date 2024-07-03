@@ -27,7 +27,7 @@ Asegurese de estar en la ruta correcta (sobre la carpeta Client)
 ## Instrucciones para Correcta Ejecución - Server (BACKEND)
 Asegurese de estar en la ruta correcta (sobre la carpeta Server)
 ### `Instalar modulos`
-#### npm init
+#### npm install
 #### npm install mysql express
 #### npm install cors
 ### `Ejecutar Server`

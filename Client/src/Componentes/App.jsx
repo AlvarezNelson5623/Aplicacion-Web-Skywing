@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+//import React, { useState } from 'react';
 import { Navbar, Nav, Modal, Button } from 'react-bootstrap';
 import '../Estilos/App.css';
 import Carousel from './Carrusel.jsx';
@@ -21,7 +22,7 @@ function App() {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
   
-    const togglePasswordVisibility = () => {
+/*    const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
     };
   const handleNavLinkClick = (page) => {
@@ -44,7 +45,50 @@ function App() {
     setPassword('');
     handleNavLinkClick('carousel')
   };
+*/
+useEffect(() => {
+  const checkSessionExpiration = () => {
+    const expirationTime = localStorage.getItem('expirationTime');
+    if (expirationTime && new Date().getTime() > expirationTime) {
+      handleLogout();
+    }
+  };
 
+  const interval = setInterval(checkSessionExpiration, 1000); // Verifica cada segundo
+
+  return () => clearInterval(interval);
+}, []);
+
+const togglePasswordVisibility = () => {
+  setShowPassword(!showPassword);
+};
+
+const handleNavLinkClick = (page) => {
+  setCurrentPage(page);
+};
+
+const handleLogin = () => {
+  if (username === 'usuario' && password === 'contraseña') {
+    setLoggedIn(true);
+    setError('');
+    setShowModal(false);
+
+    const expirationTime = new Date().getTime() + 10 * 60 * 1000; // Expira en 10 minutos
+    localStorage.setItem('loggedIn', 'true');
+    localStorage.setItem('expirationTime', expirationTime);
+  } else {
+    setError('Usuario o contraseña incorrectos');
+  }
+};
+
+const handleLogout = () => {
+  setLoggedIn(false);
+  setUsername('');
+  setPassword('');
+  setCurrentPage('carousel');
+  localStorage.removeItem('loggedIn');
+  localStorage.removeItem('expirationTime');
+};
   return (
     <>
     <div className="App">
@@ -63,9 +107,6 @@ function App() {
           </Nav.Link>
           <Nav.Link id='nav' onClick={() => handleNavLinkClick('Vuelos')}>
             Vuelos
-          </Nav.Link>
-          <Nav.Link id='nav' onClick={() => handleNavLinkClick('Reserva')}>
-            Reserva
           </Nav.Link>
           {loggedIn && (
             <Nav.Link id='nav' onClick={() => handleNavLinkClick('Reserva')}>
@@ -121,7 +162,7 @@ function App() {
           {error && <div className="alert alert-danger">{error}</div>}
           <form>
             <div className="form-group">
-              <label htmlFor="username">Usuario:</label>
+              <label id='user' htmlFor="username">Usuario:</label>
               <input
                 type="text"
                 className="form-control"
@@ -131,7 +172,7 @@ function App() {
               />
             </div>
             <div className="form-group">
-      <label htmlFor="password">Contraseña:</label>
+      <label id='cont' htmlFor="password">Contraseña:</label>
       <div className="input-group">
         <input
           type={showPassword ? 'text' : 'password'}

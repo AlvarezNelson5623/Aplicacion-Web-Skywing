@@ -52,3 +52,10 @@ margin-right: 40px;
 .navbar .social-icons a:hover {
   transform: scale(1.1); 
 }
+
+#cont{
+  color: black;
+}
+#user{
+  color: black;
+}
