@@ -49,7 +49,7 @@ const handleLogin = () => {
     setError('');
     setShowModal(false);
 
-    const expirationTime = new Date().getTime() + 1 * 60 * 1000; // Expira en 10 minutos
+    const expirationTime = new Date().getTime() + 5 * 60 * 1000; // Expira en 10 minutos
     localStorage.setItem('loggedIn', 'true');
     localStorage.setItem('expirationTime', expirationTime);
   } else {
