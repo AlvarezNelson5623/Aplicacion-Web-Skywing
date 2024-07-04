@@ -85,6 +85,25 @@ reservas.delete("/delete/:id_reserva", (req, res) => {
   );
 
 });
+
+reservas.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  const query = 'SELECT * FROM user WHERE user = ? AND password = ?';
+  db.query(query, [username, password], (err, result) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send({ error: "Error en la consulta" });
+    } else {
+      if (result.length > 0) {
+        res.send({ success: true });
+      } else {
+        res.send({ success: false, message: 'Usuario o contraseña incorrectos' });
+      }
+    }
+  });
+});
+
 reservas.listen(3001, () => {
   console.log("Corriendo en el puerto 3001");
 });
