@@ -12,7 +12,7 @@ import twitter from '../img/twitter.png';
 import instagram from '../img/instagram.png';
 import linkedin from '../img/linkedin.png';
 import Footer from './footer.jsx';
-
+import Axios from "axios";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('carousel');
@@ -44,18 +44,27 @@ const handleNavLinkClick = (page) => {
 };
 
 const handleLogin = () => {
-  if (username === 'usuario' && password === 'contraseña') {
-    setLoggedIn(true);
-    setError('');
-    setShowModal(false);
+  Axios.post('http://localhost:3001/login', {
+    username,
+    password
+  }).then((response) => {
+    if (response.data.success) {
+      setLoggedIn(true);
+      setError('');
+      setShowModal(false);
 
-    const expirationTime = new Date().getTime() + 5 * 60 * 1000; // Expira en 10 minutos
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('expirationTime', expirationTime);
-  } else {
-    setError('Usuario o contraseña incorrectos');
-  }
+      const expirationTime = new Date().getTime() + 5 * 60 * 1000; // Expira en 5 minutos
+      localStorage.setItem('loggedIn', 'true');
+      localStorage.setItem('expirationTime', expirationTime);
+    } else {
+      setError('Usuario o contraseña incorrectos');
+    }
+  }).catch((error) => {
+    console.error('Error al iniciar sesión:', error);
+    setError('Error al iniciar sesión');
+  });
 };
+
 
 const handleLogout = () => {
   setLoggedIn(false);
