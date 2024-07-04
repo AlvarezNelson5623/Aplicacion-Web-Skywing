@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 //import React, { useState } from 'react';
+import Swal from 'sweetalert2'
 import { Navbar, Nav, Modal, Button } from 'react-bootstrap';
 import '../Estilos/App.css';
 import Carousel from './Carrusel.jsx';
@@ -48,7 +49,7 @@ const handleLogin = () => {
     setError('');
     setShowModal(false);
 
-    const expirationTime = new Date().getTime() + 10 * 60 * 1000; // Expira en 10 minutos
+    const expirationTime = new Date().getTime() + 1 * 60 * 1000; // Expira en 10 minutos
     localStorage.setItem('loggedIn', 'true');
     localStorage.setItem('expirationTime', expirationTime);
   } else {
@@ -63,6 +64,11 @@ const handleLogout = () => {
   setCurrentPage('carousel');
   localStorage.removeItem('loggedIn');
   localStorage.removeItem('expirationTime');
+  Swal.fire({
+    title: "<strong>Oops!!</strong>",
+    html: "<i>Sesión Expirada</i>",
+    icon: 'error'
+  })
 };
   return (
     <>
