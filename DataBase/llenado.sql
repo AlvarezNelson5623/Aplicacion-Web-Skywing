@@ -29,7 +29,7 @@ INSERT INTO ruta(id_ruta,id_origen,id_destino,costo) VALUES
 -- LLENADO RESERVAS
 -- -----------------------------------------------------
 INSERT INTO reservas(id_reserva,id_ruta,id_clase,id_extras,fecha,hora,pasajeros,costo_reserva) 
-VALUES(NULL,1,2,1,'2024-06-27','10:00:00', 2,null);
+VALUES(NULL,1,2,1,'2024-06-27','10:00:00', 2,95000);
 
 
 
