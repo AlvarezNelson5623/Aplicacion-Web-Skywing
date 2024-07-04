@@ -129,7 +129,18 @@ const handleLogout = () => {
         {currentPage === 'carousel' && <Carousel />}
         {currentPage === 'Reserva' && <Reserva />}
         {currentPage === 'contacto' && <Contacto />}
-        {currentPage === 'Vuelos' && <Vuelos />}
+        {currentPage === 'Vuelos' && <Vuelos setShowModal={setShowModal}
+              loggedIn={loggedIn}
+              handleNavLinkClick={handleNavLinkClick}
+              showPassword={showPassword}
+              togglePasswordVisibility={togglePasswordVisibility}
+              username={username}
+              setUsername={setUsername}
+              password={password}
+              setPassword={setPassword}
+              error={error}
+              setError={setError}
+              handleLogin={handleLogin}/>}
         {<Footer />}
       </div>
 
